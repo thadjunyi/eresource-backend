@@ -1,7 +1,7 @@
 The frontend and backend of the application is hosted on the IDE, while the elasticsearch, minio and mongodb is hosted on containers using local dockers.
 
 # Dockers
-# Elasticsearch (localhost:9200)
+## Elasticsearch (localhost:9200)
 docker pull docker.elastic.co/elasticsearch/elasticsearch:7.7.1
 docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" --name elasticsearch docker.elastic.co/elasticsearch/elasticsearch:7.7.1
 
@@ -37,8 +37,8 @@ npm run serve
 7. Insert multiple documents using Postman:
 	- POST http://localhost:8080/api/documents/insert
 		{
-			"title": <_title_>,
-			"content": <_content_)
+			"title": <title>,
+			"content": <content>
 		}
 		
 8. Insert multiple audio in http://localhost:8081/#/audio:
