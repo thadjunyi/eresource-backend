@@ -37,8 +37,8 @@ npm run serve
 7. Insert multiple documents using Postman:
 	- POST http://localhost:8080/api/documents/insert
 		{
-			"title": <title>,
-			"content": <content>,
+			"title": <some_title>,
+			"content": <some_content>
 		}
 		
 8. Insert multiple audio in http://localhost:8081/#/audio:
