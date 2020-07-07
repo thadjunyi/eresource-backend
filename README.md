@@ -2,22 +2,22 @@ The frontend and backend of the application is hosted on the IDE, while the elas
 
 # Dockers
 ## Elasticsearch (localhost:9200)
-docker pull docker.elastic.co/elasticsearch/elasticsearch:7.7.1
-docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" --name elasticsearch docker.elastic.co/elasticsearch/elasticsearch:7.7.1
+- docker pull docker.elastic.co/elasticsearch/elasticsearch:7.7.1
+- docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" --name elasticsearch docker.elastic.co/elasticsearch/elasticsearch:7.7.1
 
 ## Minio (localhost:9000 minioadmin)
-docker pull minio/minio
-docker run -p 9000:9000 --name minio minio/minio server /data
+- docker pull minio/minio
+- docker run -p 9000:9000 --name minio minio/minio server /data
 
 ## MongoDB (localhost:27019)
-docker pull mongo
-docker run -d -p 27017-27019:27017-27019 --name mongodb mongo:latest
+- docker pull mongo
+- docker run -d -p 27017-27019:27017-27019 --name mongodb mongo:latest
 
 ## Spring Boot (localhost:8080)
-start the application
+- start the application
 
 ## Vue (localhost:8081)
-npm run serve
+- npm run serve
 
 # Steps to initialized the database
 1. Create audio bucket in minio:
@@ -36,10 +36,7 @@ npm run serve
 
 7. Insert multiple documents using Postman:
 	- POST http://localhost:8080/api/documents/insert
-		{
-			"title": <some_title>,
-			"content": <some_content>
-		}
+	- { "title": <some_title>, "content": <some_content> }
 		
 8. Insert multiple audio in http://localhost:8081/#/audio:
 	- Click on the '+' icon at the bottom right.
