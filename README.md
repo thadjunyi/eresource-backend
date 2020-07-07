@@ -38,7 +38,7 @@ npm run serve
 	- POST http://localhost:8080/api/documents/insert
 		{
 			"title": <title>,
-			"content": <content>
+			"content": <content>,
 		}
 		
 8. Insert multiple audio in http://localhost:8081/#/audio:
